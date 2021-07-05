@@ -33,7 +33,7 @@ public class EnseignantService {
                 salaire = Etudiant.getHeurePayee()*enseignant.getNombreHeuresCoursAnnee();
             }
             else{
-                salaire =salaire = Etudiant.getHeurePayee()*enseignant.getNombreHeuresCoursAnnee();
+                salaire = Etudiant.getHeurePayee()*enseignant.getNombreHeuresCoursAnnee();
             }
         }
 
@@ -53,7 +53,7 @@ public class EnseignantService {
 
     public String recapSalaire(Enseignant enseignant){
         return enseignant.toString()+ "\n"+ "Votre salaire : "
-                +calculSalaire(enseignant)+ "\n"+ "Charges payées par l'université : "+calculCharges(enseignant) ;
+                +calculSalaire(enseignant)+ "\n"+ "Charges payées par l'université : "+calculCharges(enseignant) +"\n----";
     }
 
 

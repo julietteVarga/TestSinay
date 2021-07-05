@@ -39,7 +39,7 @@ public class Enseignant {
     public String toString() {
         return "Votre nom : " + nom + '\n' +
                 "votre prenom : " + prenom + '\n' +
-                "le nombre d'heure effectués cette année : " + nombreHeuresCoursAnnee ;
+                "le nombre d'heure effectuées cette année : " + nombreHeuresCoursAnnee ;
     }
 
     /**

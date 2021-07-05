@@ -46,24 +46,24 @@ public class Main {
     //-------------------------------------------------------------------------------------------------------------------------------------------
 
         // Exercice 2
-        Chercheur chercheur = new Chercheur("Varga","Juliette",300);
+        Chercheur chercheur = new Chercheur("Chercheur","Juliette",300);
         Etudiant etudiant = new Etudiant("Varga","Juliette",60);
-        Etudiant etudiantHorsLaLoi = new Etudiant("Varga","Juliette");
-        Etudiant etudiantHorsLaLoi2 = new Etudiant("Varga","Juliette",130);
-        Vacataire vacataire = new Vacataire("Varga","Juliette",196);
+        Etudiant etudiantHorsLaLoi = new Etudiant("Etudiant","Juliette");
+        Etudiant etudiantHorsLaLoi2 = new Etudiant("Test","Test",130);
+        Vacataire vacataire = new Vacataire("Vacataire","Juliette",196);
 
 
         etudiantHorsLaLoi.setNombreHeuresCoursAnnee(300);
 
-        EnseignantService ficheSalaireEtudiant = new EnseignantService();
+        EnseignantService ficheSalaire = new EnseignantService();
 
         System.out.println("------------------------Chercheur-------------------------------------");
-        System.out.println(ficheSalaireEtudiant.recapSalaire(chercheur));
+        System.out.println(ficheSalaire.recapSalaire(chercheur));
         System.out.println("------------------------Etudiant-------------------------------------");
-        System.out.println(ficheSalaireEtudiant.recapSalaire(etudiant));
-        System.out.println(ficheSalaireEtudiant.recapSalaire(etudiantHorsLaLoi));
-        System.out.println(ficheSalaireEtudiant.recapSalaire(etudiantHorsLaLoi2));
+        System.out.println(ficheSalaire.recapSalaire(etudiant));
+        System.out.println(ficheSalaire.recapSalaire(etudiantHorsLaLoi));
+        System.out.println(ficheSalaire.recapSalaire(etudiantHorsLaLoi2));
         System.out.println("------------------------Vacataire-------------------------------------");
-        System.out.println(ficheSalaireEtudiant.recapSalaire(vacataire));
+        System.out.println(ficheSalaire.recapSalaire(vacataire));
     }
 }
