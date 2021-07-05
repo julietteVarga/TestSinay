@@ -1,49 +1,64 @@
-package fr.tp.bo;
+package fr.bo.exercice1;
 
 /**
- * Classe ArticleTVA pour répondre à la question 6
+ * Classe Article pour répondre aux questions de 1 à 5
  */
-public class ArticleTVA {
+public class Article {
     private String reference;
     private String designation;
     private Float prixHorsTaxes;
-    private static final Float PRIX_TVA = 20F;
+    private Float prixTva;
 
     /**
-     * Contructeur par défaut
+     * Constructeur par défaut
      */
-    public ArticleTVA() {
+    public Article() {
     }
 
     /**
-     * Constructeur avec en paramètre la référence, la désignation et la prixHT
+     * Constructeur pour tous les attributs
      * @param reference
      * @param designation
      * @param prixHorsTaxes
+     * @param prixTva
      */
-    public ArticleTVA(String reference, String designation, Float prixHorsTaxes) {
+    public Article(String reference, String designation, Float prixHorsTaxes, Float prixTva) {
         this.reference = reference;
         this.designation = designation;
         this.prixHorsTaxes = prixHorsTaxes;
+        this.prixTva = prixTva;
     }
 
     /**
-     * Constructeur avec en paramètre la référence et la désignation
+     * Constructeur pour renseigner la référence et la désignation
      * @param reference
      * @param designation
      */
-    public ArticleTVA(String reference, String designation) {
+    public Article(String reference, String designation) {
         this.reference = reference;
         this.designation = designation;
     }
+
     /**
-     * Constructeur de copie d'articleTVA
+     * Constructeur de copie d'article
      */
-    public ArticleTVA(ArticleTVA articletva){
-        reference = articletva.reference;
-        designation = articletva.designation;
-        prixHorsTaxes = articletva.prixHorsTaxes;
+    public Article(Article article){
+        reference = article.reference;
+        designation = article.designation;
+        prixHorsTaxes = article.prixHorsTaxes;
+        prixTva = article.prixTva;
     }
+
+
+
+    /**
+     * Méthode qui retourne le prix ttc de l'article donné en paramètre
+     * @return Float : le prix TTC de l'article
+     */
+    public Float calculerPrixTTC(){
+        return this.prixHorsTaxes+(this.prixHorsTaxes*this.prixTva/100);
+    }
+
     /**
      * La méthode pour afficher les informations d'un article
      * @return String : les informations de l'article.
@@ -52,24 +67,21 @@ public class ArticleTVA {
         return "La référence de l'article : " + reference +
                 ", la designation de l'article : " + designation +
                 ", le prix hors taxes de l'article : " + prixHorsTaxes +
-                ", le prix TVA : " + PRIX_TVA +
+                ", le prix TVA : " + prixTva +
                 ", le prix TTC de l'article : " + calculerPrixTTC();
     }
 
-    private Float calculerPrixTTC() {
-        return this.prixHorsTaxes+(this.prixHorsTaxes*PRIX_TVA/100);
-    }
 
     /**
-     * Getter pour la référence de l'article
-     * @return String : la référence
+     * Getter de Reference
+     * @return un string : la réference de l'article
      */
     public String getReference() {
         return reference;
     }
 
     /**
-     * Setter pour la référence de l'article
+     * Setter de Reference
      * @param reference
      */
     public void setReference(String reference) {
@@ -77,15 +89,15 @@ public class ArticleTVA {
     }
 
     /**
-     * Getter pour la désignation de l'article
-     * @return String : la désignation
+     * Getter de Designation
+     * @return un string : la désignation de l'article
      */
     public String getDesignation() {
         return designation;
     }
 
     /**
-     * Setter pour la désignation de l'article
+     * Setter de Désignation
      * @param designation
      */
     public void setDesignation(String designation) {
@@ -93,15 +105,15 @@ public class ArticleTVA {
     }
 
     /**
-     * Getter pour le prix hors taxes de l'article
-     * @return Float : le prix hors taxes
+     * Getter du prix hors taxes
+     * @return Float : le prix hors taxes de l'article
      */
     public Float getPrixHorsTaxes() {
         return prixHorsTaxes;
     }
 
     /**
-     * Setter pour le prix hors taxes de l'article
+     * Setter du prix hors taxes
      * @param prixHorsTaxes
      */
     public void setPrixHorsTaxes(Float prixHorsTaxes) {
@@ -110,9 +122,17 @@ public class ArticleTVA {
 
     /**
      * Getter du prix TVA
-     * @return Float
+     * @return Float : le prix TVA de l'article
      */
-    public static Float getPrixTva() {
-        return PRIX_TVA;
+    public Float getPrixTva() {
+        return prixTva;
+    }
+
+    /**
+     * Setter du prix TVA
+     * @param prixTva
+     */
+    public void setPrixTva(Float prixTva) {
+        this.prixTva = prixTva;
     }
 }
