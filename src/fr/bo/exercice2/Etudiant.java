@@ -13,9 +13,9 @@ public class Etudiant extends Enseignant {
 
     /**
      * Contructeur avec tous les paramètres
-     * @param nom
-     * @param prenom
-     * @param nombreHeuresCoursAnnee
+     * @param nom de l'étudiant
+     * @param prenom de l'étudiant
+     * @param nombreHeuresCoursAnnee nombre d'heures que l'étudiant à assuré en une année
      */
     public Etudiant(String nom, String prenom, int nombreHeuresCoursAnnee) {
         super(nom, prenom,nombreHeuresCoursAnnee);
@@ -26,8 +26,8 @@ public class Etudiant extends Enseignant {
 
     /**
      * Constructeur avec nom et prénom
-     * @param nom
-     * @param prenom
+     * @param nom de l'étudiant
+     * @param prenom de l'étudiant
      */
     public Etudiant(String nom, String prenom) {
         super(nom, prenom);

@@ -15,9 +15,9 @@ public class Enseignant {
 
     /**
      * Constructeur avec tous les attributs
-     * @param nom
-     * @param prenom
-     * @param nombreHeuresCoursAnnee
+     * @param  nom de l'enseignant
+     * @param prenom de l'enseignant
+     * @param nombreHeuresCoursAnnee le nombre d'heures de cours assurées par l'enseignant en une année
      */
     public Enseignant(String nom, String prenom, int nombreHeuresCoursAnnee) {
         this.nom = nom;
@@ -27,8 +27,8 @@ public class Enseignant {
 
     /**
      * Constructeur avec nom et prénom
-     * @param nom
-     * @param prenom
+     * @param nom de l'enseignant
+     * @param prenom de l'enseignant
      */
     public Enseignant(String nom, String prenom) {
         this.nom = nom;
@@ -44,7 +44,7 @@ public class Enseignant {
 
     /**
      * Getter du nom de l'enseignant
-     * @return String : le nom
+     * @return String : le nom de l'enseignant
      */
     public String getNom() {
         return nom;
@@ -52,7 +52,7 @@ public class Enseignant {
 
     /**
      * Setter du nom de l'enseignant
-     * @param nom
+     * @param nom de l'enseignant
      */
     public void setNom(String nom) {
         this.nom = nom;
@@ -60,7 +60,7 @@ public class Enseignant {
 
     /**
      * Getter du prénom de l'enseignant
-     * @return String : prénom
+     * @return String : prénom de l'enseignant
      */
     public String getPrenom() {
         return prenom;
@@ -68,7 +68,7 @@ public class Enseignant {
 
     /**
      * Setter du prénom de l'enseignant
-     * @param prenom
+     * @param prenom de l'enseignant
      */
     public void setPrenom(String prenom) {
         this.prenom = prenom;
@@ -76,7 +76,7 @@ public class Enseignant {
 
     /**
      * Getter du nombre d'heures de cours assurés dans l'année
-     * @return int : nombre d'heures
+     * @return int : le nombre d'heures de cours assurées par l'enseignant en une année
      */
     public int getNombreHeuresCoursAnnee() {
         return nombreHeuresCoursAnnee;
@@ -84,7 +84,7 @@ public class Enseignant {
 
     /**
      * Setter du nombre d'heures de cours assurés dans l'année
-     * @param nombreHeuresCoursAnnee
+     * @param nombreHeuresCoursAnnee le nombre d'heures de cours assurées par l'enseignant en une année
      */
     public void setNombreHeuresCoursAnnee(int nombreHeuresCoursAnnee) {
         this.nombreHeuresCoursAnnee = nombreHeuresCoursAnnee;

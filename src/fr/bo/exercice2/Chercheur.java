@@ -6,7 +6,7 @@ public class Chercheur extends Enseignant {
 
     /**
      * Getter pour le salaire de base
-     * @return int
+     * @return int le salaire de base
      */
     public static int getSalaireBase() {
         return SALAIRE_BASE;
@@ -28,9 +28,9 @@ public class Chercheur extends Enseignant {
 
     /**
      * Constructeur avec tous les paramètres
-     * @param nom
-     * @param prenom
-     * @param nombreHeuresCoursAnnee
+     * @param nom du chercheur
+     * @param prenom du chercheur
+     * @param nombreHeuresCoursAnnee nombre d'heures que le chercheur à assuré en une année
      */
     public Chercheur(String nom, String prenom, int nombreHeuresCoursAnnee) {
         super(nom, prenom, nombreHeuresCoursAnnee);

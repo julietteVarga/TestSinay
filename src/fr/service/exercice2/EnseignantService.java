@@ -43,14 +43,19 @@ public class EnseignantService {
 
     /**
      * Fonction pour trouver le montant des charges payées par l'université.
-     * @param enseignant
-     * @return int
+     * @param enseignant l'enseignant
+     * @return int le montant des charges
      */
     public int calculCharges(Enseignant enseignant){
         int salaire = calculSalaire(enseignant);
         return salaire/Enseignant.getPourcentageSalaire();
     }
 
+    /**
+     * Fonction pour retourner un récapitulatif de l'enseignant
+     * @param enseignant l'enseignant
+     * @return nom, prenom, nombre d'heures effectuées, le salaire et les charges payées par l'université
+     */
     public String recapSalaire(Enseignant enseignant){
         return enseignant.toString()+ "\n"+ "Votre salaire : "
                 +calculSalaire(enseignant)+ "\n"+ "Charges payées par l'université : "+calculCharges(enseignant) +"\n----";
