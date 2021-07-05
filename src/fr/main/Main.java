@@ -72,5 +72,6 @@ public class Main {
         System.out.println(ficheSalaire.recapSalaire(etudiantHorsLaLoi2));
         System.out.println("------------------------Vacataire-------------------------------------");
         System.out.println(ficheSalaire.recapSalaire(vacataire));
+
     }
 }
