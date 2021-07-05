@@ -20,6 +20,7 @@ public class Main {
         article4.setReference("test");
         article4.setDesignation("testDesignation");
         article4.setPrixHorsTaxes(99F);
+
         article4.setPrixTva(6F);
 
 
