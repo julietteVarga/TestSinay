@@ -2,9 +2,6 @@ package fr.service.exercice2;
 
 import fr.bo.exercice2.Chercheur;
 import fr.bo.exercice2.Enseignant;
-import fr.bo.exercice2.Etudiant;
-import fr.bo.exercice2.Vacataire;
-
 /**
  * Classe utilisée pour contenir les fonctions importantes
  */
@@ -16,28 +13,32 @@ public class EnseignantService {
      * @return le salaire dû à l'enseignant.
      */
     public int calculSalaire(Enseignant enseignant){
-        int salaire = 0;
+        int salaire;
         if (enseignant instanceof Chercheur) {
-            if (enseignant.getNombreHeuresCoursAnnee() > 192) {
-                int nombreHeuresComplementaires = enseignant.getNombreHeuresCoursAnnee() - 192;
-                salaire = (Chercheur.getSalaireBase()*12) + (nombreHeuresComplementaires * Chercheur.getHeureComplementaire());
-            } else {
-                salaire = Chercheur.getSalaireBase()*12;
-            }
+            salaire = gestionSalaireChercheur((Chercheur) enseignant);
         }
-        else if (enseignant instanceof Vacataire){
-            salaire = Vacataire.getHeurePayee()*enseignant.getNombreHeuresCoursAnnee();
-        }
-        else{
-            if(enseignant.getNombreHeuresCoursAnnee()> Etudiant.getHeurePasDepasser()){
-                salaire = Etudiant.getHeurePayee()*enseignant.getNombreHeuresCoursAnnee();
-            }
-            else{
-                salaire = Etudiant.getHeurePayee()*enseignant.getNombreHeuresCoursAnnee();
-            }
+        else {
+            salaire = enseignant.getHeurePayee()*enseignant.getNombreHeuresCoursAnnee();
         }
 
 
+        return salaire;
+    }
+
+    /**
+     * Calcul de la paie spécifique aux Enseignants chercheurs
+     * Si le chercheur effectue plus de 192 heures alors on ajoute 40 à chaque heure travaillée en plus.
+     * @param chercheur l'enseignant chercheur
+     * @return le salaire spécifique au chercheur.
+     */
+    private int gestionSalaireChercheur(Chercheur chercheur) {
+        int salaire;
+        if (chercheur.getNombreHeuresCoursAnnee() > 192) {
+            int nombreHeuresComplementaires = chercheur.getNombreHeuresCoursAnnee() - 192;
+            salaire = (chercheur.getSalaireBase()) + (nombreHeuresComplementaires * (chercheur.getHeureComplementaire()));
+        } else {
+            salaire = chercheur.getSalaireBase()*12;
+        }
         return salaire;
     }
 

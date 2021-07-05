@@ -4,11 +4,8 @@ public class Vacataire extends Enseignant{
 
     private static final int HEURE_PAYEE = 40;
 
-    /**
-     * Getter pour le salaire pour une heure travaillée
-     * @return int le salaire
-     */
-    public static int getHeurePayee() {
+    @Override
+    public int getHeurePayee() {
         return HEURE_PAYEE;
     }
 

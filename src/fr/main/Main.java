@@ -38,11 +38,13 @@ public class Main {
         // Exercice 6
         ArticleTVA articleTva = new ArticleTVA("articleTVA","Designation",33F);
 
-
+        //Aficher article 2
+        System.out.println(article2.afficherArticle());
         //Afficher l'article 3
         System.out.println(article3.afficherArticle());
         //Afficher l'article TVA excercice 6
         System.out.println(articleTva.afficherArticle());
+
         System.out.println("-----------------------------fin de l'exercice 1 -------------------------------\n");
 
 

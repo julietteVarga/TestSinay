@@ -3,8 +3,10 @@ package fr.bo.exercice2;
 public class Enseignant {
     private String nom;
     private String prenom;
+    private int heurePayee;
     private int nombreHeuresCoursAnnee;
     private static final int POURCENTAGE_SALAIRE = 10;
+
 
     /**
      * Contructeur par défaut
@@ -96,5 +98,13 @@ public class Enseignant {
      */
     public static int getPourcentageSalaire() {
         return POURCENTAGE_SALAIRE;
+    }
+
+    /**
+     * Getter de montant d'une heure payée.
+     * @return montant payé
+     */
+    public int getHeurePayee(){
+        return this.heurePayee;
     }
 }

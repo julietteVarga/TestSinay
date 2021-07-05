@@ -4,19 +4,21 @@ public class Chercheur extends Enseignant {
     private static final int SALAIRE_BASE = 2000;
     private static final int HEURE_COMPLEMENTAIRE = 40;
 
+    public int getHeureComplementaire() {
+        return HEURE_COMPLEMENTAIRE;
+    }
+
     /**
      * Getter pour le salaire de base
      * @return int le salaire de base
      */
-    public static int getSalaireBase() {
+    public int getSalaireBase() {
         return SALAIRE_BASE;
     }
 
-    /**
-     * Getter pour le taux de rémunération pour les heures complémentaires
-     * @return int
-     */
-    public static int getHeureComplementaire() {
+
+    @Override
+    public int getHeurePayee() {
         return HEURE_COMPLEMENTAIRE;
     }
 

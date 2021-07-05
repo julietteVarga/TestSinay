@@ -38,7 +38,7 @@ public class Etudiant extends Enseignant {
      * @return String
      */
     private String erreurEtudiant(){
-        return "un étudiant ne peut pas dépasser les "+HEURE_PAS_DEPASSER+" heures de travail par an! "
+        return "un étudiant ne peut pas dépasser les "+this.getHeurePasDepasser()+" heures de travail par an! "
                 +"Veuillez contacter l'étudiant "+ this.getNom() + " " + this.getPrenom()+ " afin de voir en détail avec" +
                 " lui";
     }
@@ -47,15 +47,12 @@ public class Etudiant extends Enseignant {
      * Getter pour le nombre d'heure à ne pas dépasser pour un étudiant
      * @return int
      */
-    public static int getHeurePasDepasser() {
+    public int getHeurePasDepasser() {
         return HEURE_PAS_DEPASSER;
     }
 
-    /**
-     * Salaire pour une heure travaillée
-     * @return int
-     */
-    public static int getHeurePayee() {
+    @Override
+    public int getHeurePayee() {
         return HEURE_PAYEE;
     }
 
